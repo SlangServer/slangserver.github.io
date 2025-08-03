@@ -1,0 +1,124 @@
+body {
+    margin: 0;
+}
+
+header {
+    padding: 10px 20px;
+    background-color: #6666FF;
+    color:white;
+}
+
+h1 {
+    margin: 0;
+}
+
+p {
+    margin: 0px;
+}
+
+.wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+    flex: 1;
+}
+
+section {
+    box-shadow: 0px 0px 5px rgba(0,0,0,0.5);
+    border-radius: 10px;
+    padding: 10px 15px;
+    text-align: left;
+    margin: 10px;
+    transition: 0.2s ease;
+}
+
+section:hover {
+    transform: translateY(-5px);
+}
+
+section h2 {
+    margin: 0px;
+}
+
+section p {
+    margin: 0px;
+    padding-left: 10px;
+}
+
+section p.en {
+    font-size: 0.95em;
+}
+
+input {
+    margin: 10px 0px;
+    width: 80%;
+    max-width: 400px;
+    box-shadow: inset 0px 0px 5px rgba(0,0,0,0.5);
+    border-radius: 7.5px;
+    height: 40px;
+    border: 0px;
+    padding: 0px 15px;
+
+}
+
+.random_slang {
+    text-align: left;
+}
+
+.random_slang h1 {
+    margin-left: 20px;
+    margin-top: 30px;
+}
+
+.h2-tags {
+    display: flex;
+    align-items: flex-end;
+}
+
+.h2-tags h2 {
+    margin-right: 20px;
+}
+
+.tag {
+    background-color: #DDDDFF;
+    border-radius: 5px;
+    padding: 5px;
+    margin-left: 10px;
+    margin-bottom: 4px;
+    height: 18px;
+}
+
+.tag p {
+    margin: 0px;
+    padding: 0px;
+    font-size: 12px;
+}
+
+.howto {
+    display: flex;
+    justify-content: center;
+}
+
+.howto p {
+    color: white;
+    background-color: #6666FF;
+    border-radius: 5px;
+    margin: 5px 10px;
+    padding: 5px 10px;
+}
+
+footer {
+    background-color: #6666FF;
+    color: white;
+    margin: 0px;
+    padding: 10px 20px;
+}

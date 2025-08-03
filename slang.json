@@ -1,0 +1,123 @@
+[
+    {
+        "term": "鯖",
+        "reading": "さば",
+        "read-en": "saba",
+        "meaning": "サーバーの略称。主にオンラインゲームやSNSで使われる。",
+        "mean-en": "Abbreviation for server. Mainly used in online games and social networking services.",
+        "usage": "「この鯖、人多すぎ！」",
+        "origin": "音が似ていることから。",
+        "category": ["ネット用語", "ゲーム"],
+        "related": ["鯖主"]
+    },
+    {
+        "term": "鯖主",
+        "reading": "さばぬし",
+        "read-en": "saba nushi",
+        "meaning": "サーバーを管理する人の略称。",
+        "mean-en": "server administrator",
+        "usage": "「鯖主に言って。」",
+        "origin": "「鯖」の「主」から。",
+        "category": ["ネット用語", "ゲーム"],
+        "related": ["鯖"]
+    },
+    {
+        "term": "草",
+        "reading": "くさ",
+        "read-en": "kusa",
+        "meaning": "笑ったことを指す単語。",
+        "mean-en": "A word that refers to laughing. lol.",
+        "usage": "「本当に草」",
+        "origin": "笑ったことにwが使われており、それが草に見えた説と、<br>笑 → 藁 → 草 となった説がある。",
+        "category": ["ネット用語"],
+        "related": []
+    },
+    {
+        "term": "垢",
+        "reading": "あか",
+        "read-en": "aka",
+        "meaning": "アカウントの略称。",
+        "mean-en": "Abbreviation for account",
+        "usage": "「別垢」",
+        "origin": "アカウント → あか となり、赤と混同しないよう垢という漢字が充てられた。",
+        "category": ["ネット用語"],
+        "related": []
+    },
+    {
+        "term": "ガチ勢",
+        "reading": "がちぜい",
+        "read-en": "gachi-zei",
+        "meaning": "その分野に本気で取り組む人。本気のプレイヤー。",
+        "mean-en": "A serious, dedicated player or enthusiast.",
+        "usage": "あの人はガチ勢だから毎日練習してるよ。",
+        "origin": "「ガチ（本気）」＋「勢（集団・人々）」の組み合わせ。",
+        "category": ["ゲーマー", "属性", "コミュニティ"],
+        "related": ["エンジョイ勢", "廃人"]
+    },
+    {
+        "term": "炎上",
+        "reading": "えんじょう",
+        "read-en": "enjou",
+        "meaning": "SNSや掲示板で多くの批判や非難が集中すること。",
+        "mean-en": "To receive a storm of criticism or backlash online.",
+        "usage": "有名人の投稿が炎上してトレンド入りした。",
+        "origin": "火事が燃え広がる様子をネット上の騒動にたとえた比喩。",
+        "category": ["SNS", "トラブル", "ネット文化"],
+        "related": ["燃料", "バズる"]
+    },
+    {
+        "term": "メンテ",
+        "reading": "めんて",
+        "read-en": "mente",
+        "meaning": "「メンテナンス（保守・整備）」の略。特にゲームの定期保守に使われる。",
+        "mean-en": "Short for maintenance, often used for game server upkeep.",
+        "usage": "今はメンテ中だからプレイできないよ。",
+        "origin": "英語の「maintenance」の略語。",
+        "category": ["ゲーム", "IT", "略語"],
+        "related": ["アプデ", "鯖"]
+    },
+    {
+        "term": "ナーフ",
+        "reading": "なーふ",
+        "read-en": "na-fu",
+        "meaning": "ゲーム内でキャラクターや武器などが弱体化されること。",
+        "mean-en": "A reduction in the power or effectiveness of a game element.",
+        "usage": "このキャラ、次のアップデートでナーフされるらしい。",
+        "origin": "英語の「Nerf（柔らかいおもちゃの銃）」から。攻撃力を弱める意味合いで使用。",
+        "category": ["ゲーム", "調整", "バランス"],
+        "related": ["バフ", "調整", "アプデ"]
+    },
+    {
+        "term": "バグる",
+        "reading": "ばぐる",
+        "read-en": "baguru",
+        "meaning": "プログラムやシステムが誤作動を起こすこと。混乱する様子を指すことも。",
+        "mean-en": "To malfunction or behave erratically due to a bug.",
+        "usage": "キャラが突然空を飛んだ、完全にバグってる！",
+        "origin": "英語の「bug」＋日本語の動詞化「〜る」",
+        "category": ["ゲーム", "プログラミング", "現象"],
+        "related": ["クラッシュ", "フリーズ"]
+    },
+    {
+        "term": "神引き",
+        "reading": "かみびき",
+        "read-en": "kamibiki",
+        "meaning": "ガチャやくじで非常に良い結果を引き当てること。",
+        "mean-en": "To get a very rare or desirable item in a lottery or gacha.",
+        "usage": "10連でSSRが3枚とか神引きすぎる！",
+        "origin": "「神」＋「引く」の組み合わせ。神がかった引き運。",
+        "category": ["ゲーム", "運", "ガチャ"],
+        "related": ["爆死", "単発", "当たり"]
+    },
+    {
+        "term": "沼る",
+        "reading": "ぬまる",
+        "read-en": "numaru",
+        "meaning": "深くハマって抜け出せなくなること。ガチャや推し活にも使われる。",
+        "mean-en": "To become deeply absorbed or obsessed with something.",
+        "usage": "このジャンルに完全に沼ってる。",
+        "origin": "「沼（ぬま）」という抜けにくい場所にたとえて使われる。",
+        "category": ["オタク文化", "推し活", "感情"],
+        "related": ["推し", "ハマる", "闇鍋"]
+    }
+]
