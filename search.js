@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Enterキーでsearch.indexに遷移
     input.addEventListener('keydown', (e) => {
         if (e.key === 'Enter') {
-            window.location.href = 'search.index';
+            window.location.href = 'search.html';
         }
     });
 
