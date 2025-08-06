@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         resultDiv.innerHTML = filtered.map(item => {
             const tagsHtml = item.category.map(tag => `<span class="tag">${tag}</span>`).join(' ');
-            return `<div class="h2-tags"><h2>${item.term}</h2>${tagsHtml}</div><p>${item.meaning}</p>`;
+            return `<section><div class="h2-tags"><h2>${item.term}</h2>${tagsHtml}</div><p>${item.meaning}</p></section>`;
         }).join('');
     }
 });
