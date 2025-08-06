@@ -1,30 +1,34 @@
-const terms = [/* JSONデータをここに入れるか fetch() で読み込みます */];
+document.addEventListener('DOMContentLoaded', () => {
+    const input = document.getElementById('search');
+    const resultDiv = document.getElementById('result');
 
-const input = document.getElementById("search");
-const results = document.getElementById("results");
+    // Enterキーでsearch.indexに遷移
+    input.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') {
+            window.location.href = 'search.index';
+        }
+    });
 
-input.addEventListener("input", () => {
-    const query = input.value.trim();
-    results.innerHTML = "";
-    if (query === "") return;
+    // 入力ごとに検索
+    input.addEventListener('input', async () => {
+        const keyword = input.value.trim().toLowerCase();
+        if (!keyword) {
+            resultDiv.innerHTML = '';
+            return;
+        }
+        const res = await fetch('slang.json');
+        const data = await res.json();
 
-    const filtered = terms.filter(t =>
-    t.term.includes(query) || t.reading.includes(query) || t["read-en"].includes(query)
-    );
+        const filtered = data.filter(item => {
+            const termMatch = item.term.toLowerCase().includes(keyword);
+            const readingMatch = item.reading.toLowerCase().includes(keyword);
+            const categoryMatch = item.category.some(cat => cat.toLowerCase().includes(keyword));
+            return termMatch || readingMatch || categoryMatch;
+        });
 
-    if (filtered.length === 0) {
-    results.innerHTML = "<p>該当する用語が見つかりませんでした。</p>";
-    return;
-    }
-
-    filtered.forEach(term => {
-    const el = document.createElement("div");
-    el.className = "term-card";
-    el.innerHTML = `
-        <div class="term-title">${term.term}</div>
-        <div class="term-tags">${term.category?.join(", ") || ""}</div>
-        <div class="term-meaning">${term.meaning}</div>
-    `;
-    results.appendChild(el);
+        resultDiv.innerHTML = filtered.map(item => {
+            const tagsHtml = item.category.map(tag => `<span class="tag">${tag}</span>`).join(' ');
+            return `<div class="h2-tags"><h2>${item.term}</h2>${tagsHtml}</div><p>${item.meaning}</p>`;
+        }).join('');
     });
 });
