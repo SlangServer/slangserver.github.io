@@ -251,6 +251,10 @@ header input {
     padding: 0 10px;
 }
 
+.tags-section .tags {
+    margin-top: 10px;
+}
+
 @media (max-width:700px) {
     header input {
         display: none;
