@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', async () => {
     const input = document.getElementById('search');
     const resultDiv = document.getElementById('result');
-    console.log(resultDiv); // ここでnullならHTMLとの紐付けに問題あり
 
     // URLパラメータからキーワード取得
     const params = new URLSearchParams(window.location.search);
@@ -11,7 +10,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         await searchAndDisplay(urlKeyword);
     }
 
-    // Enterキーでsearch.indexに遷移
+    // Enterキーでsearch.htmlに遷移
     input.addEventListener('keydown', async (e) => {
         if (e.isComposing) return; // IME変換中は何もしない
         if (e.key === 'Enter') {
@@ -40,6 +39,8 @@ document.addEventListener('DOMContentLoaded', async () => {
             const categoryMatch = item.category.some(cat => cat.toLowerCase().includes(keyword.toLowerCase()));
             return termMatch || readingMatch || categoryMatch;
         });
+
+        if (!resultDiv) return; // resultDivがなければ以降の処理をしない
 
         if (filtered.length === 0) {
             resultDiv.innerHTML = '<p>該当するスラングが見つかりませんでした。</p>';
