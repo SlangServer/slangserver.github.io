@@ -40,6 +40,11 @@ document.addEventListener('DOMContentLoaded', async () => {
             return termMatch || readingMatch || categoryMatch;
         });
 
+        if (filtered.length === 0) {
+            resultDiv.innerHTML = '<p>該当するスラングが見つかりませんでした。</p>';
+            return;
+        }
+
         resultDiv.innerHTML = filtered.map(item => {
             const tagsHtml = item.category.map(tag => `<span class="tag">${tag}</span>`).join(' ');
             return `<section><div class="h2-tags"><h2>${item.term}</h2>${tagsHtml}</div><p>${item.meaning}</p></section>`;
