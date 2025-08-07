@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', async () => {
     const input = document.getElementById('search');
     const resultDiv = document.getElementById('result');
+    console.log(resultDiv); // ここでnullならHTMLとの紐付けに問題あり
 
     // URLパラメータからキーワード取得
     const params = new URLSearchParams(window.location.search);
