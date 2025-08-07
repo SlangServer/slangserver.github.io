@@ -11,17 +11,13 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     // Enterキーでsearch.htmlに遷移
-    input.addEventListener('keydown', async (e) => {
+    input.addEventListener('keydown', (e) => {
         if (e.isComposing) return; // IME変換中は何もしない
         if (e.key === 'Enter') {
             const keyword = input.value.trim();
-            if (keyword) {
-                await searchAndDisplay(keyword); // Enterキーで検索実行
-                window.location.href = `search.html?keyword=${encodeURIComponent(keyword)}`;
-            } else {
-                resultDiv.innerHTML = '';
-                window.location.href = 'search.html';
-            }
+            window.location.href = keyword
+                ? `search.html?keyword=${encodeURIComponent(keyword)}`
+                : 'search.html';
         }
     });
 
