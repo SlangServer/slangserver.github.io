@@ -11,21 +11,18 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     // Enterキーでsearch.indexに遷移
-    input.addEventListener('keydown', (e) => {
+    input.addEventListener('keydown', async (e) => {
+        if (e.isComposing) return; // IME変換中は何もしない
         if (e.key === 'Enter') {
             const keyword = input.value.trim();
             if (keyword) {
+                await searchAndDisplay(keyword); // Enterキーで検索実行
                 window.location.href = `search.html?keyword=${encodeURIComponent(keyword)}`;
             } else {
+                resultDiv.innerHTML = '';
                 window.location.href = 'search.html';
             }
         }
-    });
-
-    // 入力ごとに検索
-    input.addEventListener('input', async () => {
-        const keyword = input.value.trim().toLowerCase();
-        await searchAndDisplay(keyword);
     });
 
     async function searchAndDisplay(keyword) {
