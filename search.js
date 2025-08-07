@@ -1,6 +1,19 @@
 document.addEventListener('DOMContentLoaded', async () => {
     const input = document.getElementById('search');
     const resultDiv = document.getElementById('result');
+    const tagsDiv = document.getElementById('tags');
+
+    // タグ一覧の表示
+    async function displayTags() {
+        const res = await fetch('slang.json');
+        const data = await res.json();
+        // category配列をすべて集めて重複排除
+        const allCategories = data.flatMap(item => item.category);
+        const uniqueCategories = [...new Set(allCategories)];
+        tagsDiv.innerHTML = uniqueCategories.map(tag => `<span class="tag">${tag}</span>`).join(' ');
+    }
+
+    await displayTags();
 
     // URLパラメータからキーワード取得
     const params = new URLSearchParams(window.location.search);
