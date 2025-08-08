@@ -97,6 +97,7 @@ input {
     margin-left: 10px;
     margin-bottom: 4px;
     cursor: pointer;
+    display: block;
 }
 
 .tag p {
